@@ -1,0 +1,54 @@
+﻿<Window x:Class="CameraPlusScriptMaker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CameraPlusScriptMaker"
+        mc:Ignorable="d"
+        Title="Camera Plus Script Maker" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="UIScriptsList" HorizontalAlignment="Left" Height="331" Margin="10,78,0,0" VerticalAlignment="Top" Width="189" SelectionChanged="UIScriptsList_SelectionChanged"/>
+        <ListBox x:Name="UIKeyframes" HorizontalAlignment="Left" Height="331" Margin="204,78,0,0" VerticalAlignment="Top" Width="69" SelectionChanged="UIKeyframes_SelectionChanged"/>
+        <Label Content="Paths:" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="Keyframes:" HorizontalAlignment="Left" Margin="204,52,0,0" VerticalAlignment="Top" Width="69"/>
+        <TextBox x:Name="UIStartPosX" HorizontalAlignment="Left" Height="23" Margin="298,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="UIAddKeyframe" Content="Add New Keyframe" HorizontalAlignment="Left" Margin="278,78,0,0" VerticalAlignment="Top" Width="117" Click="UIAddKeyframe_Click"/>
+        <Button x:Name="UIRemove" Content="Remove Selected" HorizontalAlignment="Left" Margin="400,78,0,0" VerticalAlignment="Top" Width="103" Click="UIRemove_Click"/>
+        <Label Content="Start Pos:" HorizontalAlignment="Left" Margin="278,106,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label Content="X:" HorizontalAlignment="Left" Margin="278,132,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIStartPosY" HorizontalAlignment="Left" Height="23" Margin="298,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Y:" HorizontalAlignment="Left" Margin="278,158,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIStartPosZ" HorizontalAlignment="Left" Height="23" Margin="298,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Z:" HorizontalAlignment="Left" Margin="278,184,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIStartRotX" HorizontalAlignment="Left" Height="23" Margin="448,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="X:" HorizontalAlignment="Left" Margin="428,132,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIStartRotY" HorizontalAlignment="Left" Height="23" Margin="448,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Y:" HorizontalAlignment="Left" Margin="428,158,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIStartRotZ" HorizontalAlignment="Left" Height="23" Margin="448,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Z:" HorizontalAlignment="Left" Margin="428,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Start Rot:" HorizontalAlignment="Left" Margin="428,106,0,0" VerticalAlignment="Top" Width="69"/>
+        <TextBox x:Name="UIEndPosX" HorizontalAlignment="Left" Height="23" Margin="298,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="End Pos:" HorizontalAlignment="Left" Margin="278,215,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label Content="X:" HorizontalAlignment="Left" Margin="278,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIEndPosY" HorizontalAlignment="Left" Height="23" Margin="298,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Y:" HorizontalAlignment="Left" Margin="278,267,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIEndPosZ" HorizontalAlignment="Left" Height="23" Margin="298,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Z:" HorizontalAlignment="Left" Margin="278,293,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIEndRotX" HorizontalAlignment="Left" Height="23" Margin="448,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="X:" HorizontalAlignment="Left" Margin="428,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIEndRotY" HorizontalAlignment="Left" Height="23" Margin="448,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Y:" HorizontalAlignment="Left" Margin="428,267,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UIEndRotZ" HorizontalAlignment="Left" Height="23" Margin="448,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Z:" HorizontalAlignment="Left" Margin="428,293,0,0" VerticalAlignment="Top"/>
+        <Label Content="End Rot:" HorizontalAlignment="Left" Margin="428,215,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label Content="Duration:" HorizontalAlignment="Left" Margin="278,324,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.377,0.038"/>
+        <TextBox x:Name="UIDuration" HorizontalAlignment="Left" Height="23" Margin="337,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Delay:" HorizontalAlignment="Left" Margin="278,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.377,0.038"/>
+        <TextBox x:Name="UIDelay" HorizontalAlignment="Left" Height="23" Margin="337,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="UIApply" Content="Apply" HorizontalAlignment="Left" Margin="278,383,0,0" VerticalAlignment="Top" Width="75" Click="UIApply_Click"/>
+        <Button x:Name="UINewPath" Content="New Path" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="75" Click="UINewPath_Click" />
+        <TextBox x:Name="UINewPathName" HorizontalAlignment="Left" Height="23" Margin="90,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
+        <Label Content="Name: (no spaces)" HorizontalAlignment="Left" Margin="85,3,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
