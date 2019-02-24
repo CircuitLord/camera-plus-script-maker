@@ -6,4 +6,4 @@ A small utility for assisting with creating and modifying camera path scripts fo
 Put it and it's other files in: BeatSaberFolder/UserData/CameraPlus/Scripts
 
 ## Usage
-Check out this video: https://www.youtube.com/watch?v=yzP1kQ1qM1Q
+Check out this video: https://www.youtube.com/watch?v=Aa5aoEF0k4E
