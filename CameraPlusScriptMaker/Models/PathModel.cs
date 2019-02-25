@@ -27,6 +27,8 @@ namespace CameraPlusScriptMaker.Models
 			public Rot EndRot { get; set; } = new Rot();
 			public double Duration { get; set; } = 4;
 			public double Delay { get; set; } = 0;
+
+			public bool EaseTransition { get; set; } = true;
 		}
 
 		public class Pos {

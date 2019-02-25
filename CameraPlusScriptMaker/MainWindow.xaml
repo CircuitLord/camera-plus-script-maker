@@ -49,6 +49,7 @@
         <Button x:Name="UINewPath" Content="New Path" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="75" Click="UINewPath_Click" />
         <TextBox x:Name="UINewPathName" HorizontalAlignment="Left" Height="23" Margin="90,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"/>
         <Label Content="Name: (no spaces)" HorizontalAlignment="Left" Margin="85,3,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="UIEaseTransition" Content="Ease Transition" HorizontalAlignment="Left" Margin="462,331,0,0" VerticalAlignment="Top" IsChecked="True"/>
 
     </Grid>
 </Window>

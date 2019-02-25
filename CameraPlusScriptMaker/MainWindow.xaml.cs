@@ -98,6 +98,7 @@ namespace CameraPlusScriptMaker
 
 			UIDuration.Text = loadedPath.Movements[UIKeyframes.SelectedIndex].Duration.ToString();
 			UIDelay.Text = loadedPath.Movements[UIKeyframes.SelectedIndex].Delay.ToString();
+			UIEaseTransition.IsChecked = loadedPath.Movements[UIKeyframes.SelectedIndex].EaseTransition;
 
 		}
 
@@ -119,6 +120,7 @@ namespace CameraPlusScriptMaker
 
 			loadedPath.Movements[UIKeyframes.SelectedIndex].Duration = Convert.ToDouble(UIDuration.Text);
 			loadedPath.Movements[UIKeyframes.SelectedIndex].Delay = Convert.ToDouble(UIDelay.Text);
+			loadedPath.Movements[UIKeyframes.SelectedIndex].EaseTransition = (bool)UIEaseTransition.IsChecked;
 
 			string json = JsonConvert.SerializeObject(loadedPath);
 			File.WriteAllText(Directory.GetCurrentDirectory() + @"\" + UIScriptsList.SelectedValue, json);
@@ -180,5 +182,6 @@ namespace CameraPlusScriptMaker
 
 			
 		}
+
 	}
 }
