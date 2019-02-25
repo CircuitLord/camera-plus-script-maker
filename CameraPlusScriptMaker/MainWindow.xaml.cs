@@ -58,7 +58,7 @@ namespace CameraPlusScriptMaker
 
 		private void UIScriptsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e) {
 			loadedPath = userPaths[UIScriptsList.SelectedIndex];
-
+			UIKeyframes.SelectedIndex = -1;
 			PopulateKeyframesUI();
 
 		}
